@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Player App</title>
+    <link rel="stylesheet" type="text/css" href="musicPLayer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- Toggle button -->
+    <nav>
+      <div id="toggle-container">
+        <div id="toggle-button" class="light"></div>
+        <span id="theme">Dark</span>
+      </div>
+    </nav>
+
+    <!-- Heading -->
+    <h1 id="heading">Music Player</h1>
+
+    <main>
+      <section id="show-songs-section">
+        <p>Filter by Genre:</p>
+        <select id="genre-dropdown">
+          <option value="all" selected>All</option>
+          <option value="pop">Pop</option>
+          <option value="rock">Rock</option>
+          <option value="hiphop">HipHop</option>
+        </select>
+
+        <h2>All Songs</h2>
+
+        <div id="all-songs">
+          <!-- <div>Song</div> -->
+        </div>
+      </section>
+
+      <section id="song-card-section">
+        <div id="song-card-container">
+          <div id="song-card">
+            <div id="song-card-image">
+              <img id="song-img" src="image/blank.png" alt="song card img" />
+            </div>
+          </div>
+
+          <div id="song-card-info">
+            <h2 id="song-card-title">Name</h2>
+            <p id="song-card-artist">Artist</p>
+          </div>
+        </div>
+        <div id="audio-container">
+          <audio id="audio" src="" controls></audio>
+        </div>
+
+        <div id="audio-controls">
+          <div id="previous" class="audio-control-style"><=</div>
+          <div id="next" class="audio-control-style">=></div>
+        </div>
+
+        <div id="add-to-playlist-container">
+          <div id="add-to-playlist" class="audio-control-style">
+            Add to playlist
+          </div>
+        </div>
+      </section>
+
+      <section id="playlist-section">
+        <form id="playlist-form">
+          <input
+            type="text"
+            id="playlist-name"
+            placeholder="Enter playlist name"
+          />
+          <button id="create-playlist">Create Playlist</button>
+        </form>
+
+        <div id="playlist-container">
+          <h2>Current Playlist</h2>
+          <div id="currentPlaylist">
+            <!-- <div>Shape of you</div>
+                    <div>Shape of you</div>
+                    <div>Shape of you</div> -->
+          </div>
+
+          <h2>All PlayList</h2>
+          <div id="allPlaylist"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="musicPlayer.js"></script>
+  </body>
+</html>
